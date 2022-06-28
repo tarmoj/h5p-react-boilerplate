@@ -21,14 +21,14 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "sharedb-test.css",
+      filename: "h5p-hello-world.css",
     }),
   ],
   entry: {
-    dist: "./src/entries/sharedb-test.js",
+    dist: "./src/entries/h5p-hello-world.js",
   },
   output: {
-    filename: "sharedb-test.js",
+    filename: "h5p-hello-world.js",
     path: path.resolve(__dirname, "dist"),
   },
   target: ["web", "es5"], // IE11

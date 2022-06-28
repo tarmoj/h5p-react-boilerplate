@@ -15,7 +15,7 @@ export default class HelloReact {
 
     // Create render root
     this.root = document.createElement("div");
-    this.name = "Adalbert Bartolkoff-Simeon";
+    this.name =  params.textField ||  "Adalbert Bartolkoff-Simeon";
 
 
 
