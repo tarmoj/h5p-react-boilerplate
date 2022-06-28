@@ -1,0 +1,24 @@
+{
+  "title": "Hello React",
+  "description": "Example H5P content type for getting started",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "patchVersion": 0,
+  "runnable": 1,
+  "author": "Tarmo Johannes",
+  "license": "MIT",
+  "machineName": "H5P.HelloReact",
+  "embedTypes": [
+    "iframe"
+  ],
+  "preloadedJs": [
+    {
+      "path": "dist/h5p-hello-world.js"
+    }
+  ],
+  "preloadedCss": [
+    {
+      "path": "dist/h5p-hello-world.css"
+    }
+  ]
+}

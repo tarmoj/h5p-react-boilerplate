@@ -1,0 +1,9 @@
+.h5p-hello-react {
+  color: darkmagenta;
+}
+
+.h5p-hello-react button {
+  background: ivory;
+  padding: 5px 15px;
+  border-radius: 100%;
+}
