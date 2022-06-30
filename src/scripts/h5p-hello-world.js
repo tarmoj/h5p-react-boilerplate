@@ -33,7 +33,7 @@ export default class HelloReact {
       // this.root is the container for React content
       ReactDOM.render(
           <div>
-            <h1>_React test</h1>
+            <h1>React test</h1>
             <div>Hello. My name is {this.name}</div>
             <Main question={"How many?"}/>
           </div>,
