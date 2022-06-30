@@ -5,7 +5,7 @@ import HelloReact from "../scripts/h5p-hello-world";
 H5P = H5P || {};
 H5P.HelloReact = HelloReact;
 
-H5P.HelloReacy = class extends H5P.ContentType(true) {
+H5P.HelloReact = class extends H5P.ContentType(true) {
     constructor(params, contentId, extras) {
         super();
         this.helloReact = new HelloReact(params, contentId, extras);
@@ -15,7 +15,7 @@ H5P.HelloReacy = class extends H5P.ContentType(true) {
          * Attach library to DOM.
          * @param wrapper Content's container.
          */
-        this.attach = ($wrapper) => { // enne oli väljas constructorist, tõstsin siia. Pole kindel, kas nii toimib?
+        this.attach = ($wrapper) => {
             this.helloReact.attach($wrapper);
         };
 

@@ -25,16 +25,17 @@ export default class HelloReact {
      * @param {jQuery} $wrapper Content's container.
      */
     this.attach = function ($wrapper) {
-      $wrapper.get(0).classList.add('h5p-hello-react');
+      $wrapper.addClass('h5p-hello-react');
+      $wrapper.append(this.root);
 
       // We render an initial state of the content type here. It will be updated
       // later when the data from the server has arrived.
       // this.root is the container for React content
       ReactDOM.render(
           <div>
-            <h1>React test</h1>
+            <h1>_React test</h1>
             <div>Hello. My name is {this.name}</div>
-            <Main field={"Label for the input"}/>
+            <Main question={"How many?"}/>
           </div>,
           this.root
       );
