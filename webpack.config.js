@@ -1,9 +1,9 @@
-const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
-const nodeEnv = process.env.NODE_ENV || "development";
-const isProd = nodeEnv === "production";
+const nodeEnv = process.env.NODE_ENV || 'development';
+const isProd = nodeEnv === 'production';
 
 module.exports = {
   mode: nodeEnv,
@@ -21,28 +21,28 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "h5p-hello-world.css",
+      filename: 'h5p-hello-world.css',
     }),
   ],
   entry: {
-    dist: "./src/entries/h5p-hello-world.js",
+    dist: './src/entries/h5p-hello-world.js',
   },
   output: {
-    filename: "h5p-hello-world.js",
-    path: path.resolve(__dirname, "dist"),
+    filename: 'h5p-hello-world.js',
+    path: path.resolve(__dirname, 'dist'),
   },
-  target: ["web", "es5"], // IE11
+  target: ['web', 'es5'], // IE11
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: "ts-loader",
+        use: 'ts-loader',
         exclude: /node_modules/,
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
       },
       {
         test: /\.(s[ac]ss|css)$/,
@@ -50,32 +50,32 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: "",
+              publicPath: '',
             },
           },
-          { loader: "css-loader" },
+          { loader: 'css-loader' },
           {
-            loader: "sass-loader",
+            loader: 'sass-loader',
           },
         ],
       },
       {
         test: /\.svg|\.jpg|\.png$/,
-        include: path.join(__dirname, "src/images"),
-        type: "asset/resource",
+        include: path.join(__dirname, 'src/images'),
+        type: 'asset/resource',
       },
       {
         test: /\.woff$/,
-        include: path.join(__dirname, "src/fonts"),
-        type: "asset/resource",
+        include: path.join(__dirname, 'src/fonts'),
+        type: 'asset/resource',
       },
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: ['.tsx', '.ts', '.js'],
   },
   stats: {
     colors: true,
   },
-  devtool: isProd ? undefined : "eval-cheap-module-source-map",
+  devtool: isProd ? undefined : 'eval-cheap-module-source-map',
 };

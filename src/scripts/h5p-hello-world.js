@@ -1,6 +1,6 @@
-import React from "react";
-import * as ReactDOM from "react-dom";
-import Main from "./components/Main";
+import React from 'react';
+import * as ReactDOM from 'react-dom';
+import Main from './components/Main';
 
 export default class HelloReact {
   /**
@@ -11,11 +11,11 @@ export default class HelloReact {
    * @param {object} [extras] Saved state, metadata, etc.
    */
   constructor(params, contentId, extras = {}) {
-    console.log("params: ", params);
+    console.log('params: ', params);
 
     // Create render root
-    this.root = document.createElement("div");
-    this.name =  params.textField ||  "Adalbert Bartolkoff-Simeon";
+    this.root = document.createElement('div');
+    this.name =  params.textField ||  'Adalbert Bartolkoff-Simeon';
 
 
 
@@ -35,7 +35,7 @@ export default class HelloReact {
           <div>
             <h1>React test</h1>
             <div>Hello. My name is {this.name}</div>
-            <Main question={"How many?"}/>
+            <Main question={'How many?'}/>
           </div>,
           this.root
       );
