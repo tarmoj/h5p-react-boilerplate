@@ -37,6 +37,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^6.6.0",
     "eslint": "^8.9.0",
+    "eslint-plugin-react": "^7.11.1",
     "mini-css-extract-plugin": "^2.5.3",
     "regenerator-runtime": "^0.13.9",
     "resolve-url-loader": "^5.0.0",
