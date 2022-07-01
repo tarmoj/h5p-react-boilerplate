@@ -9,13 +9,13 @@ H5P.HelloReact = class extends H5P.ContentType(true) {
   constructor(params, contentId, extras) {
     super();
     this.helloReact = new HelloReact(params, contentId, extras);
+  }
 
-    /**
-     * Attach library to DOM.
-     * @param wrapper Content's container.
-     */
-    this.attach = ($wrapper) => {
-      this.helloReact.attach($wrapper);
-    };
+  /**
+   * Attach library to DOM.
+   * @param wrapper Content's container.
+   */
+  attach($wrapper) {
+    this.helloReact.attach($wrapper);
   }
 };

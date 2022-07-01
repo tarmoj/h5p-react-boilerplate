@@ -18,27 +18,27 @@ export default class HelloReact {
     this.name =  params.textField ||  'Adalbert Bartolkoff-Simeon';
     this.contentId = contentId;
     this.extras = extras;
+  }
 
-    /**
-     * Attach library to wrapper.
-     *
-     * @param {jQuery} $wrapper Content's container.
-     */
-    this.attach = function ($wrapper) {
-      $wrapper.addClass('h5p-hello-react');
-      $wrapper.append(this.root);
+  /**
+   * Attach library to wrapper.
+   *
+   * @param {jQuery} $wrapper Content's container.
+   */
+  attach($wrapper) {
+    $wrapper.addClass('h5p-hello-react');
+    $wrapper.append(this.root);
 
-      // We render an initial state of the content type here. It will be updated
-      // later when the data from the server has arrived.
-      // this.root is the container for React content
-      ReactDOM.render(
-        <div>
-          <h1>React test</h1>
-          <div>Hello. My name is {this.name}</div>
-          <Main question={'How many?'}/>
-        </div>,
-        this.root
-      );
-    };
+    // We render an initial state of the content type here. It will be updated
+    // later when the data from the server has arrived.
+    // this.root is the container for React content
+    ReactDOM.render(
+      <div>
+        <h1>React test</h1>
+        <div>Hello. My name is {this.name}</div>
+        <Main question={'How many?'}/>
+      </div>,
+      this.root
+    );
   }
 }
