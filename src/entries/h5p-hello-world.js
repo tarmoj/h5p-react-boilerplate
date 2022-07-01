@@ -13,7 +13,7 @@ H5P.HelloReact = class extends H5P.ContentType(true) {
 
   /**
    * Attach library to DOM.
-   * @param wrapper Content's container.
+   * @param {jQuery} $wrapper Content's container.
    */
   attach($wrapper) {
     this.helloReact.attach($wrapper);

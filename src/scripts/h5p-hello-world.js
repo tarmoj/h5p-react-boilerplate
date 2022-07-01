@@ -5,7 +5,6 @@ import Main from './components/Main';
 export default class HelloReact {
   /**
    * @constructor
-   *
    * @param {object} params Parameters passed by the editor.
    * @param {number} contentId Content's id.
    * @param {object} [extras] Saved state, metadata, etc.
@@ -22,16 +21,17 @@ export default class HelloReact {
 
   /**
    * Attach library to wrapper.
-   *
    * @param {jQuery} $wrapper Content's container.
    */
   attach($wrapper) {
     $wrapper.addClass('h5p-hello-react');
     $wrapper.append(this.root);
 
-    // We render an initial state of the content type here. It will be updated
-    // later when the data from the server has arrived.
-    // this.root is the container for React content
+    /*
+     * We render an initial state of the content type here. It will be updated
+     * later when the data from the server has arrived.
+     * this.root is the container for React content
+     */
     ReactDOM.render(
       <div>
         <h1>React test</h1>
