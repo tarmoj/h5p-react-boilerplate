@@ -1,5 +1,5 @@
-import '../styles/h5p-hello-world.css';
 import HelloReact from '../scripts/h5p-hello-world';
+import '../styles/h5p-hello-world.scss';
 
 // Load library
 H5P = H5P || {};

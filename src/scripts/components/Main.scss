@@ -1,0 +1,10 @@
+@import '../../styles/main.scss';
+
+.h5p-react-question {
+
+  button.h5p-react-question-button {
+    background: $color-background-button;
+    padding: 5px 15px;
+    border-radius: 100%;
+  }
+}

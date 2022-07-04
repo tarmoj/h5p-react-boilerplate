@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './Main.scss';
 
 /**
  * A simple React functional component displaying simple demo UI.
@@ -12,9 +13,14 @@ export default function Main(props) {
   };
 
   return (
-    <div>
-      <p>{props.question} <br /> Result: {value}</p>
-      <button onClick={takeRandom}>Press</button>
+    <div className={'h5p-react-question'}>
+      <p className={'h5p-react-question-text'}>
+        {props.question} <br /> Result: {value}
+      </p>
+      <button
+        className={'h5p-react-question-button'}
+        onClick={takeRandom}>Press</button
+      >
     </div>
   );
 }
